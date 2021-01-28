@@ -8,14 +8,20 @@ public class LinkedList<E> implements List<E> {
 	Node<E> first=null;
     Node<E> last=null;
     int size=0;
-
-	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+    
+    
+    public int size() {
+		int ext = 0;
+		Node nodo = first;
+        while (nodo != null ) {
+            nodo = nodo.getNext();
+            ext+=1;
+        }
+        return ext;
 	}
-
+    
 	public boolean isEmpty() {
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+		return first==null && last==null;
 	}
 
 	public boolean contains(Object o) {
@@ -36,7 +42,11 @@ public class LinkedList<E> implements List<E> {
 	}
 
 	public boolean add(E e) {
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+		Node n = new Node(e);
+        n.setNext(first);
+        first = n;
+        size++;
+        return true;
 	}
 
 	public boolean remove(Object o) {
@@ -62,7 +72,11 @@ public class LinkedList<E> implements List<E> {
 	public boolean retainAll(Collection<?> c) {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
-
+	public void print(){
+		Node nodo = first;
+		while (nodo != null) nodo = nodo.getNext();
+		System.out.println(nodo);
+	}
 	public void clear() {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 		
