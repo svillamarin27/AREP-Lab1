@@ -14,4 +14,10 @@ public class Node<T> {
     public Node getNext(){
         return siguiente;
     }
+    public T getT(){
+        return primero;
+    }
+    public void setT(T elemento){
+       this.primero=elemento ;
+    }
 }
