@@ -29,10 +29,28 @@ public class LinkedList<E> implements List<E> {
 	}
 
 	public Iterator<E> iterator() {
+		 Iterator<E> iterador;
+	        iterador = new Iterator<E>() {
+	            Node primero=first;
+	            public boolean hasNext() {
+	                boolean bandera=false;
+	                if(primero!=null){
+	                    bandera=true;
+	                }
+	                return bandera;
+	            }
+	            public E next(){
+	               E cont =(E)primero.getT();
+	               if(primero.equals(last)){
+	                   primero=null;
+	                }else{
+	                   primero=primero.getNext();
+	               }
+	                return cont;  
+	            }
+	        };
+	    return iterador;
 		
-		
-		
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.TODO Auto-generated method stub
 		
 	}
 
@@ -69,7 +87,7 @@ public class LinkedList<E> implements List<E> {
                    first=first.getNext();
                 }
             }else {
-                tam-=1;
+                tam--;
                 ant = nodo;
                 nodo = nodo.getNext();
             }
