@@ -52,3 +52,5 @@ Se puede apreciar que en la primera tabla estan los datos y en la segunda tabla 
 ### Sebastián Camilo Villamarín Rodríguez
 
 # Licencia
+
+Este proyecto esta licenciado bajo la licencia General Public License v3.0, revise el archivo [LICENSE](LICENSE) para más información.
