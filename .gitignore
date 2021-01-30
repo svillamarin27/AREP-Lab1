@@ -1,18 +1,3 @@
-##############################
-## Java
-##############################
-.mtj.tmp/
-*.class
-*.jar
-*.war
-*.ear
-*.nar
-hs_err_pid*
-
-##############################
-## Maven
-##############################
-target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -64,6 +49,8 @@ local.properties
 ##############################
 ## NetBeans
 ##############################
+
+nbproject/
 nbproject/private/
 build/
 nbbuild/
@@ -82,3 +69,4 @@ nb-configuration.xml
 ## OS X
 ##############################
 .DS_Store
+/target/
