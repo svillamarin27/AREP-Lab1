@@ -14,9 +14,12 @@ public class App
 	public static double desviacion( List<Double> listaDesviacion ){
 		double cont = 0.0;
 		double promedio= media(listaDesviacion);
-		for(double i: listaDesviacion) {
-        	cont+=Math.pow((i*promedio),2);
-        }
-		return Math.sqrt(cont/(listaDesviacion.size()-1));
+		int tam = listaDesviacion.size();
+		
+		for(int i=0 ; i<tam;i++) {
+			cont+=(double) Math.pow(listaDesviacion.get(i)-promedio, 2);
+		}
+		return (Double) Math.sqrt(cont / (tam - 1));
 	}
+	
 }
